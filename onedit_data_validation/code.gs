@@ -11,7 +11,7 @@ function onEdit(e)
    */
   // Specify the name of the sheet that has the 
   var tabLists = "Rules";
-  var tabValidation = "Main";
+  var tabValidation = ["Main"];
   
   // Where are the headers
   var validationHeaders = 'A1:1';
@@ -24,7 +24,7 @@ function onEdit(e)
   
   // Early check to short circuit if we aren't on the sheet we want to validate
   var ss = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  if(ss.getSheetName() != tabValidation) {
+  if(tabValidation.indexOf(ss.getSheetName()) !== false) {
     return; 
   }  
   
