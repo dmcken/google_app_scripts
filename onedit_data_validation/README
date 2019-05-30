@@ -1,0 +1,13 @@
+Dependent cell data validation:
+
+Problem definition:
+  Google apps spreadsheets offers a data validation option, a very useful use of this is to be able to use a range from somewhere else in the spreadsheet (list from range). What is not directly supported is changing what range is used conditional on another cell as part of the row. This is easiest explained by an example, you have one column with a car's model the list to show the user should only contain the models based on the make / brand specified before (e.g. If you selected BMW, the prius by Toyota should not show up).
+  
+Use:
+- Create a sheet which will hold the lists of whatever data with the first row holding the primary classification (e.g. makes of cars).
+- On the same sheet under each heading, put the sub-categories (e.g. models of cars).
+- 
+  
+  
+Original idea (this is just modified to use the cell definitions that a normal user would be familar with):
+- https://www.chicagocomputerclasses.com/google-sheets-apps-script-dynamic-dependent-dropdown-data-validation-lists/
