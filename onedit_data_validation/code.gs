@@ -57,7 +57,7 @@ function onEdit(e)
     { 
       // Where the list of options are hard coded to be from row just under the header.
       var validationRange = datass.getRange(2, headerIndex, datass.getLastRow());
-      var validationRule = SpreadsheetApp.newDataValidation().requireValueInRange(validationRange).build();
+      var validationRule = SpreadsheetApp.newDataValidation().requireValueInRange(validationRange).setAllowInvalid(false).build();
       dependentCell.setDataValidation(validationRule);
     }
   }
