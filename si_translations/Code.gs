@@ -51,7 +51,7 @@ function RAW_TO_SI(rep, decimal_places = 0) {
   let step_divisor = 1000;
   let step_count = 0;
 
-  while(rep > step_divisor) {
+  while(rep > step_divisor && step_count < (suffix.length - 1)) {
     rep = rep / step_divisor;
     step_count = step_count + 1;
   }
